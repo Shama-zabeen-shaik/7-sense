@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Rb3ContextFrame",
+  "description": "Derived environmental context frame from the RB3 Gen 2 Vision Kit. Non-identifying, privacy-safe features only — no face recognition, no raw video. Phase 1 skeleton.",
+  "type": "object",
+  "properties": {
+    "device_id": {
+      "type": "string",
+      "description": "Identifier for the RB3 Vision Kit device."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ambient_lux": {
+      "type": "number",
+      "description": "Estimated ambient lighting level in lux."
+    },
+    "motion_load": {
+      "type": "number",
+      "description": "Derived, unitless environmental motion/activity load estimate."
+    },
+    "presence_detected": {
+      "type": "boolean",
+      "description": "Whether a generic (non-identifying) human presence was detected in frame."
+    }
+  },
+  "required": ["device_id", "timestamp", "ambient_lux", "motion_load"],
+  "additionalProperties": false
+}

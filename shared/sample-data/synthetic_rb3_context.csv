@@ -1,0 +1,2 @@
+device_id,timestamp,ambient_lux,motion_load,presence_detected
+rb3-vision-demo,2026-08-03T09:00:00Z,320.0,0.08,true

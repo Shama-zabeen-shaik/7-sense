@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PhoneContextFrame",
+  "description": "Derived context frame from the phone companion — check-ins and notification-pressure simulation. No message/chat content. Phase 1 skeleton.",
+  "type": "object",
+  "properties": {
+    "device_id": {
+      "type": "string",
+      "description": "Identifier for the phone companion instance."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "check_in_response": {
+      "type": "string",
+      "description": "User-provided check-in response label (e.g. 'focused', 'stressed', 'tired')."
+    },
+    "notification_pressure": {
+      "type": "number",
+      "description": "Simulated/derived notification-pressure score, unitless."
+    }
+  },
+  "required": ["device_id", "timestamp"],
+  "additionalProperties": false
+}

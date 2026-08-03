@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Intervention",
+  "description": "An intervention dispatched by the scoring engine to one or more output devices. Phase 1 skeleton.",
+  "type": "object",
+  "properties": {
+    "intervention_id": {
+      "type": "string",
+      "description": "Unique identifier for this intervention instance."
+    },
+    "type": {
+      "type": "string",
+      "enum": ["ambient_light", "haptic", "audio_cue", "notification"],
+      "description": "Kind of intervention being dispatched."
+    },
+    "trigger_reason": {
+      "type": "string",
+      "description": "Short human-readable reason the intervention was triggered (e.g. 'sustained_high_stillness')."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["intervention_id", "type", "trigger_reason", "timestamp"],
+  "additionalProperties": false
+}

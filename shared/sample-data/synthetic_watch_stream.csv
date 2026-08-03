@@ -1,0 +1,2 @@
+device_id,timestamp,activity_level,stillness_duration_s,motion_variability,hr_trend,skin_temp_trend
+watch-wrd6100-demo,2026-08-03T09:00:00Z,0.12,42.5,0.03,stable,stable

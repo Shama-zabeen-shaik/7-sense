@@ -1,0 +1,52 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Node / npm (phone companion web fallback) ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+.next/
+
+# --- Windows build artifacts ---
+bin/
+obj/
+x64/
+x86/
+*.exe
+*.pdb
+*.ilk
+packaging/windows/output/
+
+# --- IDE ---
+.idea/
+*.suo
+*.user
+
+# --- OS junk ---
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# --- Secrets ---
+*.env
+.env
+.env.*
+secrets.*
+*.pfx
+*.pem
+
+# --- Misc ---
+*.log
+release/*
+!release/.gitkeep
