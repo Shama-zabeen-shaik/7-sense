@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ArduinoEventFrame",
+  "description": "Derived event frame from the Arduino UNO Q physical intervention layer. Phase 1 skeleton.",
+  "type": "object",
+  "properties": {
+    "device_id": {
+      "type": "string",
+      "description": "Identifier for the Arduino UNO Q device."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "module": {
+      "type": "string",
+      "enum": ["pixels", "buttons", "knob", "distance", "thermo", "buzzer"],
+      "description": "Which physical module generated this event."
+    },
+    "reading": {
+      "type": "number",
+      "description": "Numeric reading or state value for the module (e.g. distance in cm, knob position, thermo reading)."
+    }
+  },
+  "required": ["device_id", "timestamp", "module", "reading"],
+  "additionalProperties": false
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SensorEvent",
+  "description": "A generic derived sensor event from any connected device. Phase 1 skeleton — to be refined per device.",
+  "type": "object",
+  "properties": {
+    "device_id": {
+      "type": "string",
+      "description": "Stable identifier for the emitting device (e.g. 'watch-wrd6100', 'rb3-vision', 'arduino-unoq')."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 UTC timestamp of the event."
+    },
+    "signal_type": {
+      "type": "string",
+      "description": "Name of the derived signal (e.g. 'stillness_duration_s', 'ambient_lux')."
+    },
+    "value": {
+      "type": "number",
+      "description": "Numeric value of the derived signal."
+    }
+  },
+  "required": ["device_id", "timestamp", "signal_type", "value"],
+  "additionalProperties": false
+}

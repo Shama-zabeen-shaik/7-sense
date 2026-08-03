@@ -1,0 +1,2 @@
+device_id,timestamp,signal_type,value
+watch-wrd6100-demo,2026-08-03T09:00:00Z,stillness_duration_s,42.5

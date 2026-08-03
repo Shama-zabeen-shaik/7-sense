@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # TODO: real lint/test steps land in a later phase, once the
+      # individual apps/models have dependencies and test suites to run.
+      - name: Placeholder lint/test step
+        run: echo "TODO: replace with real lint/test commands"

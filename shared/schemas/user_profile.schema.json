@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UserProfile",
+  "description": "Local, user-owned profile controlling which devices/signals are enabled. Phase 1 skeleton.",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "Local, non-identifying user identifier (not a real name or email)."
+    },
+    "enabled_devices": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["watch", "phone", "rb3_vision", "arduino_unoq"]
+      },
+      "description": "Which devices the user has opted into."
+    },
+    "consent_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the user last accepted the consent flow (see docs/privacy-and-consent.md)."
+    }
+  },
+  "required": ["user_id", "enabled_devices"],
+  "additionalProperties": false
+}

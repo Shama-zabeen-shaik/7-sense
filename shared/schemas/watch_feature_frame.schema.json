@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "WatchFeatureFrame",
+  "description": "Derived body/activity feature frame from the WRD6100 watch. No diagnosis, no medical claims. Phase 1 skeleton.",
+  "type": "object",
+  "properties": {
+    "device_id": {
+      "type": "string",
+      "description": "Identifier for the watch device."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "activity_level": {
+      "type": "number",
+      "description": "Derived, unitless activity level estimate."
+    },
+    "stillness_duration_s": {
+      "type": "number",
+      "description": "Seconds of continuous stillness leading up to this frame."
+    },
+    "motion_variability": {
+      "type": "number",
+      "description": "Derived variability metric of recent motion, unitless."
+    },
+    "hr_trend": {
+      "type": "string",
+      "enum": ["rising", "falling", "stable", "unavailable"],
+      "description": "Coarse heart-rate trend direction, if accessible on this device."
+    },
+    "skin_temp_trend": {
+      "type": "string",
+      "enum": ["rising", "falling", "stable", "unavailable"],
+      "description": "Coarse skin-temperature trend direction, if accessible on this device."
+    }
+  },
+  "required": ["device_id", "timestamp", "activity_level", "stillness_duration_s"],
+  "additionalProperties": false
+}

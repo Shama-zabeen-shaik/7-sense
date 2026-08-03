@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DeviceState",
+  "description": "Connection/health state of a single device, as shown on the privacy dashboard. Phase 1 skeleton.",
+  "type": "object",
+  "properties": {
+    "device_id": {
+      "type": "string",
+      "description": "Identifier for the device."
+    },
+    "connected": {
+      "type": "boolean",
+      "description": "Whether the device is currently connected/reachable."
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["live", "demo", "disabled"],
+      "description": "Current run mode for this device (see docs/demo-mode-vs-live-mode.md)."
+    },
+    "last_event_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of the last event received from this device."
+    }
+  },
+  "required": ["device_id", "connected", "mode"],
+  "additionalProperties": false
+}
